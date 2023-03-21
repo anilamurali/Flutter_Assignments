@@ -38,7 +38,7 @@ class WhatsAppMainPage extends StatelessWidget {
           ]),
         ),
         body:  TabBarView(children:[
-            Sample(),
+           Center(child: Text("Status"),),
            ChatsScreen(),
            StatusScreen(),
            CallScreen(),

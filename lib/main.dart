@@ -5,6 +5,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_assignment_ui/drawer_ui.dart';
 import 'package:flutter_assignment_ui/grid_view_assignment_ui.dart';
+import 'package:flutter_assignment_ui/phonelist.dart';
 import 'package:flutter_assignment_ui/whatsapp_ui/mainpage.dart';
 
 
@@ -34,7 +35,7 @@ class _SplashScreenState extends State<SplashScreen> {
   
 void initState(){
     Timer(Duration(seconds: 10), () { 
-      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>Drawer_UI()));
+      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>GridViewExample()));
     });
 
   }
