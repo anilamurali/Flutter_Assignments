@@ -3,6 +3,8 @@ import 'dart:async';
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_assignment_ui/Hotel%20UI/hotel.dart';
+import 'package:flutter_assignment_ui/Hotel%20UI/hotelhome.dart';
 import 'package:flutter_assignment_ui/contact_list.dart';
 import 'package:flutter_assignment_ui/drawer_ui.dart';
 import 'package:flutter_assignment_ui/farmers_fresh_ui/farmers_fresh.dart';
@@ -12,8 +14,6 @@ import 'package:flutter_assignment_ui/phonelist.dart';
 import 'package:flutter_assignment_ui/placelist.dart';
 import 'package:flutter_assignment_ui/profileui_2.dart';
 import 'package:flutter_assignment_ui/whatsapp_ui/mainpage.dart';
-
-
 
 
 void main(){
@@ -27,7 +27,12 @@ void main(){
       useInheritedMediaQuery: true,
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,
-      home:  Profile_UI_2(),);
+      home:  Hotel_Home_UI(),
+      routes: {
+        "second":(context) => Hotel_UI(),
+      },
+      );
+      
     
   }));
 }
