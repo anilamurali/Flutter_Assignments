@@ -3,10 +3,17 @@ import 'dart:async';
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_assignment_ui/contact_list.dart';
 import 'package:flutter_assignment_ui/drawer_ui.dart';
+import 'package:flutter_assignment_ui/farmers_fresh_ui/farmers_fresh.dart';
+import 'package:flutter_assignment_ui/grid_profile_ui.dart';
 import 'package:flutter_assignment_ui/grid_view_assignment_ui.dart';
 import 'package:flutter_assignment_ui/phonelist.dart';
+import 'package:flutter_assignment_ui/placelist.dart';
+import 'package:flutter_assignment_ui/profileui_2.dart';
 import 'package:flutter_assignment_ui/whatsapp_ui/mainpage.dart';
+
+
 
 
 void main(){
@@ -20,7 +27,7 @@ void main(){
       useInheritedMediaQuery: true,
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,
-      home: SplashScreen(),);
+      home:  Profile_UI_2(),);
     
   }));
 }
@@ -35,7 +42,7 @@ class _SplashScreenState extends State<SplashScreen> {
   
 void initState(){
     Timer(Duration(seconds: 10), () { 
-      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>GridViewExample()));
+      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>PlaceList()));
     });
 
   }
