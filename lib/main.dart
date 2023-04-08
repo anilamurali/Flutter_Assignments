@@ -8,7 +8,7 @@ import 'package:flutter_assignment_ui/Hotel%20UI/hotelhome.dart';
 import 'package:flutter_assignment_ui/contact_list.dart';
 import 'package:flutter_assignment_ui/drawer_ui.dart';
 import 'package:flutter_assignment_ui/farmers_fresh_ui/farmers_fresh.dart';
-import 'package:flutter_assignment_ui/grid_profile_ui.dart';
+import 'package:flutter_assignment_ui/stack_profile_ui.dart';
 import 'package:flutter_assignment_ui/grid_view_assignment_ui.dart';
 import 'package:flutter_assignment_ui/phonelist.dart';
 import 'package:flutter_assignment_ui/placelist.dart';
@@ -27,7 +27,7 @@ void main(){
       useInheritedMediaQuery: true,
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,
-      home:  Hotel_Home_UI(),
+      home:  Stack_Profile_UI(),
       routes: {
         "second":(context) => Hotel_UI(),
       },

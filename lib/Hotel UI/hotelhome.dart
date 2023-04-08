@@ -1,6 +1,30 @@
+import 'package:device_preview/device_preview.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_assignment_ui/Hotel%20UI/hotel.dart';
 import 'package:flutter_assignment_ui/Hotel%20UI/hotel_data.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+void main(){
+  runApp(DevicePreview(builder: (context){
+    enabled: !kReleaseMode;
+    return MaterialApp(
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSwatch().copyWith(primary: Color.fromARGB(255, 5, 77, 73))
+      ),
+      debugShowCheckedModeBanner: false,
+      useInheritedMediaQuery: true,
+      locale: DevicePreview.locale(context),
+      builder: DevicePreview.appBuilder,
+      home:  Hotel_Home_UI(),
+      routes: {
+        "second":(context) => Hotel_UI(),
+      },
+      );
+      
+    
+  }));
+}
+
 
 class Hotel_Home_UI extends StatefulWidget {
   const Hotel_Home_UI({super.key});
