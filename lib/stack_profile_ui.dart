@@ -1,6 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:device_preview/device_preview.dart';
+import 'package:flutter/foundation.dart';
+void main(){
+  runApp(DevicePreview(builder: (context){
+    enabled: !kReleaseMode;
+    return MaterialApp(
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSwatch().copyWith(primary: Color.fromARGB(255, 5, 77, 73))
+      ),
+      debugShowCheckedModeBanner: false,
+      useInheritedMediaQuery: true,
+      locale: DevicePreview.locale(context),
+      builder: DevicePreview.appBuilder,
+      home:  Stack_Profile_UI(),
+     
+      );
+      
+    
+  }));
+}
 
 class Stack_Profile_UI extends StatelessWidget {
   const Stack_Profile_UI({super.key});
