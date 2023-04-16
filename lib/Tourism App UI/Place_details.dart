@@ -14,9 +14,6 @@ void main() {
       builder: (context) => MaterialApp(
         debugShowCheckedModeBanner: false,
         home: const Place_Deatails_Screen(),
-        routes: {
-          "placedetails":(context)=>const Place_Deatails_Screen(),
-        },
         theme: ThemeData(primarySwatch: Colors.blue),
         useInheritedMediaQuery: true,
         locale: DevicePreview.locale(context),
@@ -91,7 +88,7 @@ class Place_Deatails_Screen extends StatelessWidget {
                           allowHalfRating: true,
                           itemCount: 5,
                           itemPadding: const EdgeInsets.symmetric(horizontal: 2.0),
-                          itemBuilder: (context, _) =>  const Icon(
+                          itemBuilder: (context, _) =>   const Icon(
                             Icons.star,
                             color: Colors.amber,
 
@@ -101,9 +98,9 @@ class Place_Deatails_Screen extends StatelessWidget {
                           },
                         ),
                       ),
-                      const Padding(
-                        padding: EdgeInsets.only(top: 9,left: 2),
-                        child: Text('4.4 Rating',style: TextStyle(
+                       Padding(
+                        padding: const EdgeInsets.only(top: 9,left: 2),
+                        child: Text('${place['rating']} Rating',style: const TextStyle(
                           color: Colors.black,
                           fontWeight: FontWeight.bold
                         ),),
@@ -125,9 +122,9 @@ class Place_Deatails_Screen extends StatelessWidget {
               ),
             ),
              Padding(
-              padding: EdgeInsets.only(top: 15,left: 10,right: 10),
+              padding: const EdgeInsets.only(top: 15,left: 10,right: 10),
               child: Text("${place["about"]}",
-              textAlign: TextAlign.justify,style: TextStyle(fontSize: 14),
+              textAlign: TextAlign.justify,style: const TextStyle(fontSize: 14),
     ),
             ),
             const Align(
