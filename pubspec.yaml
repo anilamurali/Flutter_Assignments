@@ -36,6 +36,7 @@ dependencies:
   lottie: ^2.2.0
   icons_plus: ^4.0.0
   flutter_rating_bar: ^4.0.1
+  sqflite: ^2.2.6
 
   
 
